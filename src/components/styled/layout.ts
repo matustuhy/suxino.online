@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
-const darkText = 'black'
-const lightText = 'white'
+export const darkText = 'black'
+export const lightText = 'white'
 
 const darkBackground = 'black'
 const lightBackground = 'white'
 
 export const MainLayout = styled.main`
+    margin-bottom: 45px;
 `
 
 export const Footer = styled.footer`
@@ -14,6 +15,9 @@ export const Footer = styled.footer`
   bottom: 0;
   text-align: center;
   min-width: 100%;
+  font-size: 0.75rem;
+  padding: 15px;
+  line-height: 15px;
 
   @media print {
     display: none

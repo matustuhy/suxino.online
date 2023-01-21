@@ -8,6 +8,7 @@ interface WorkHistory {
     from: string;
     to: string;
     position: string
+    projects?: string[]
 }
 
 interface WorkHistoryItemProps {
@@ -20,6 +21,10 @@ const WorkHistoryItem: React.FC<WorkHistoryItemProps> = ({item}) => {
             <Title1>{item.companyName}</Title1>
             <Subtitle1>{item.position}</Subtitle1>
             <Subtitle2>{item.from} - {item.to}</Subtitle2>
+            {/*<Subtitle2 style={{*/}
+            {/*    marginTop: '0.7rem'*/}
+            {/*}}>Projects</Subtitle2>*/}
+            {/*{item.projects?.map(project=> <ProjectLink href={project} target="_blank">{project}</ProjectLink>)}*/}
         </ListItem>
     )
 }
@@ -30,7 +35,10 @@ export const WorkHistory = () => {
             companyName: 'Riwers',
             position: "Senior Full-Stack developer",
             from: "Jan 2020",
-            to: "Present"
+            to: "Present",
+            projects: [
+                "https://people-analytix.com"
+            ]
         },
         {
             companyName: 'Accenture',

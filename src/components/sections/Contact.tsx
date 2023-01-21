@@ -1,5 +1,5 @@
 import * as React from "react"
-import {BlockLink, H2} from "../styled/typography";
+import {ContactLink, H2} from "../styled/typography";
 
 interface Contact {
     label: string;
@@ -10,17 +10,17 @@ export const Contact = () => {
     const contact: Contact[] = [
         {
             label: "LinkedIn",
-            href: ""
+            href: "https://www.linkedin.com/in/matúš-tuhý"
         }, {
             label: "Github",
-            href: ""
+            href: "https://github.com/suxino"
         },
     ]
 
     return (
         <div>
             <H2>Contact</H2>
-            {contact.map(c => <BlockLink href={c.href} key={c.label} target={"_blank"}>{c.label}</BlockLink>)}
+            {contact.map(c => <ContactLink href={c.href} key={c.label} target={"_blank"}>{c.label}</ContactLink>)}
         </div>
     )
 }
